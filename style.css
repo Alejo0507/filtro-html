@@ -242,6 +242,8 @@ h2{
         transition: 1s;
         width: 90% ;
     }
-
+    .bacground-img{
+        height: 300px;
+    }
     
 }
