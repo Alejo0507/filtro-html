@@ -50,10 +50,14 @@ body{
     margin-bottom: 350px;
 }
 .title{
+    animation: texto;
+    animation-duration: 1s;
     background: none;
     font-size: 5.5rem;
 }
 .sub-title{
+    animation: sub-texto;
+    animation-duration: 2s;
     background: none;
     font-size: 1.2rem;
 }
@@ -68,6 +72,8 @@ button{
     padding-left: 30px;
     padding-right: 30px;
     margin-top: 30px;
+    animation: sub-texto;
+    animation-duration: 2s;
 }
 button:hover{
     
@@ -120,6 +126,7 @@ button:hover{
 
 }
 .item{
+    height: 170px;
     color: #271908;
     display: flex;
     justify-content: space-between;
@@ -132,9 +139,14 @@ button:hover{
     border-bottom-right-radius: 100px;
     animation: items;
     animation-duration: 5s;
+    
 }
 
 
+.item:hover{
+    transition: 1s;
+    width: 35% ;
+}
 .text-item{
     padding: 20px;
     width: 60%;
@@ -145,15 +157,91 @@ h2{
 
 @keyframes items{
     0%{
-        
+
         opacity: 0;
     }
     100%{
         opacity: 1;
     }
 }
-@keyframes tesx-items{
+@keyframes texto{
     0%{
+
+        font-size: 0;
+    }
+    100%{
+        font-size: 5.5rem;
+    }
+}
+@keyframes sub-texto{
+    0%{
+
         opacity: 0;
     }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media(max-width:780px){
+    .container-1{
+        height: inherit;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .container-img{
+        width: 100%;
+        align-self: center;
+    }
+    .container-information{
+        padding: 20px;
+        width: 90%;
+        
+    }
+    .img-texto{
+        height: 150px;
+        margin-left: 200px;
+        margin-top: 600px;
+    }
+    .imagen-principal{
+        height: 20rem;
+    }
+    .imagen-principal::before{
+        height: 20rem;
+    }
+    .imagen-principal:hover{
+        height: 25rem;
+        transition: 0.5s;
+    }
+    .imagen-fondo-uno{
+        height: 15rem;
+    }
+    .title{
+        font-size: 4rem;
+    }
+    @keyframes texto{
+        0%{
+    
+            font-size: 0;
+        }
+        100%{
+            font-size: 4rem;
+        }
+    }
+    .container-items-row{
+        height: 600px;
+        justify-content: space-around;
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+    }
+    .item{
+        width: 80%;
+    }
+    .item:hover{
+        transition: 1s;
+        width: 90% ;
+    }
+
+    
 }
